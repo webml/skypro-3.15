@@ -45,14 +45,7 @@ const weatherRequest = (WEATHER_API) => {
   request.send();
   request.onload = function () {
     const data = JSON.parse(request.response);
-    weather.textContent =
-      "Now in " +
-      data.name +
-      " is " +
-      data.weather[0].description +
-      ", " +
-      Math.ceil(data.main.temp) +
-      " °C";
+    weather.textContent = ‘Now in ${data.name} is ${data.weather[0].description}, ${Math.ceil(data.main.temp)} °C’;
   };
 };
 
@@ -88,7 +81,7 @@ const showMessage = (status) => {
   
 }
 
-formBtn.addEventListener("click", () => {
+formBtn.addEventListener("click", (event) => {
   event.preventDefault();
   message.innerHTML = "";
   formBtn.setAttribute("disable", "disable");
