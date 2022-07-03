@@ -23,14 +23,7 @@ const uploadWeather = () => {
     const lat = data.coords.latitude;
     const lon = data.coords.longitude;
 
-    let WEATHER_API =
-      "https://api.openweathermap.org/data/2.5/weather?lat=" +
-      lat +
-      "&lon=" +
-      lon +
-      "&appid=" +
-      API_KEY +
-      "&units=metric";
+    let WEATHER_API = ‘https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric’;
 
     console.log(WEATHER_API);
 
